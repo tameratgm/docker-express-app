@@ -1,6 +1,6 @@
 # Docker Express App Example
 
-Server for Expo Application
+This is a basic Express App with TS wrapped in a Docker container.
 
 ## Prerequisites
 
