@@ -1,0 +1,15 @@
+#!/bin/sh
+
+CONTAINER_NAME='express-example'
+WORKING_DIR='/usr/src/app'
+
+# start the new container
+# we mount our source volume to the working directory so we can make changes to source
+# without rebuilding the container
+docker run -d -it                 \
+	--name "$CONTAINER_NAME"      \
+	-p 3000:3000                  \
+	-v "$PWD:$WORKING_DIR"        \
+	-w "$WORKING_DIR"             \
+	giantmachines/express-example \
+	npm start 
