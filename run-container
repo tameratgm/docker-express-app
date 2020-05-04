@@ -12,4 +12,4 @@ docker run -d -it                 \
 	-v "$PWD:$WORKING_DIR"        \
 	-w "$WORKING_DIR"             \
 	giantmachines/express-example \
-	npm start 
+	npm run container-start 

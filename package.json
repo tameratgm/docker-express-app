@@ -13,7 +13,8 @@
     "build": "tsc --sourceMap --inlineSources",
     "clean": "rimraf dist",
     "dev-local": "concurrently --kill-others \"npm run ts-watch\" \"npm run dev-server\"",
-    "ts-watch": "npm run clean && tsc --inlineSourceMap --inlineSources --watch ",
+    "ts-watch": "tsc --inlineSourceMap --inlineSources --watch ",
+    "container-start": "npm i && npm run clean && npm run build && npm run dev-local",
     "dev-server": "nodemon --watch dist dist/app.js"
   },
   "repository": {
@@ -31,7 +32,8 @@
     "concurrently": "^5.2.0",
     "express": "4.17.1",
     "nodemon": "^2.0.3",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "typescript": "^3.8.3"
   },
   "devDependencies": {}
 }
